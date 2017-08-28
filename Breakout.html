@@ -106,13 +106,15 @@
 	function draw() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		drawBall();
-		drawBall2();
+		if(ball2exists === true){
+			drawBall2();}
 		drawPaddle();
 		drawScore();
 		drawLives();		
 		drawBricks();
 		collisionDetection();
-		collisionDetection2();
+		/*collisionDetection2();
+		*/
 		
 		
 		x += dx;
@@ -252,7 +254,7 @@
 			}
 		}
 	}
-	
+/*
 	function collisionDetection2() {
 		for(c=0; c<brickColumnCount; c++) {
 			for(r=0; r<brickRowCount; r++) {
@@ -272,8 +274,8 @@
 			}
 		}
 	}
-	
 
+*/
 	
 	function random() {
 		if (score > 15) {
